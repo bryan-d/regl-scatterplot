@@ -1727,8 +1727,8 @@ const createScatterplot = (
 
       data[k + 2] = z; // z: value 1
       data[k + 3] = w; // w: value 2
-      zIsInts &&= Number.isInteger(z);
-      wIsInts &&= Number.isInteger(w);
+      zIsInts && (zIsInts = Number.isInteger(z));
+      wIsInts && (wIsInts = Number.isInteger(w));
     }
 
     if (dataTypes.z && VALUE_ZW_DATA_TYPES.includes(dataTypes.z)) {
